@@ -12,7 +12,7 @@ async function verPersonas(req, res) {
         </div>
     `;
   }
-  res.send(personasHtml);
+  res.json(personas);
 }
 
 async function crearPersona(req, res) {
