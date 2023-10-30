@@ -8,7 +8,9 @@ const {
 } = require("../controllers/personas");
 
 routerPersonas.get("/", verPersonas);
+
 routerPersonas.post("/", crearPersona);
+
 routerPersonas.get("/:id", verPersona);
 routerPersonas.delete("/:id", eliminarPersona);
 routerPersonas.put("/:id", editarPersona);

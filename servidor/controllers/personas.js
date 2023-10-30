@@ -12,7 +12,6 @@ async function verPersona(req, res) {
 }
 
 async function crearPersona(req, res) {
-  console.log(req.body);
   const { nombre, apellido, edad } = req.body;
   const persona = new Persona({
     nombre,

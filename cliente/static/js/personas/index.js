@@ -59,35 +59,36 @@ function btnsVer(personas) {
 
 renderizarTabla();
 
-// async function cargarPersonas() {
-//   let personas = await fetch("http://localhost:3000/personas")
-//     .then(function (res) {
-//       return res.json();
+// const cuerpoTabla = document.querySelector("#tbody-personas");
+
+// function cargarPersonas() {
+//   let personas = fetch("http://localhost:3000/personas")
+//     .then(function (respuesta) {
+//       return respuesta.json();
 //     })
-//     .then(function (data) {
-//       return data;
+//     .then(function (datosPersonas) {
+//       return datosPersonas;
 //     });
 //   return personas;
 // }
 
-// const tbodyPersonas = document.querySelector("#tbody-personas");
-// function renderizarTabla() {
-//   tbodyPersonas.innerHTML = "";
-//   cargarPersonas().then(function (personas) {
-//     for (let i = 0; i < personas.length; i++) {
-//       tbodyPersonas.innerHTML += `
-//             <tr>
-//                 <td>
-//                 ${personas[i].nombre}
-//                 </td>
-//                 <td>
-//                 ${personas[i].apellido}
-//                 </td>
-//                 <td>
-//                 ${personas[i].edad}
-//                 </td>
-//             </tr>
-//         `;
-//     }
+// async function renderizarTabla() {
+//   cuerpoTabla.innerHTML = "";
+//   let personas = await cargarPersonas();
+//   for (let i = 0; i < personas.length; i++) {
+//     cuerpoTabla.innerHTML += `
+//     <tr>
+//       <td>${personas[i].nombre}</td>
+//       <td>${personas[i].apellido}</td>
+//       <td>${personas[i].edad}</td>
+//       <td><button>Ver mas</button></td>
+//     </tr>
+//     `;
+//   }
+// }
+
+// function crearAJuanPerez() {
+//   fetch("http://localhost:3000/personas/654036dc489bd7f482c32c6d", {
+//     method: "DELETE",
 //   });
 // }

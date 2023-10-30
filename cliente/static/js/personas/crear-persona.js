@@ -3,7 +3,8 @@ const inputApellido = document.querySelector("#input-apellido");
 const inputEdad = document.querySelector("#input-edad");
 const btnEnviar = document.querySelector(".btn-enviar");
 
-btnEnviar.addEventListener("click", () => {
+btnEnviar.addEventListener("click", async (e) => {
+  e.preventDefault();
   const nombre = inputNombre.value;
   const apellido = inputApellido.value;
   const edad = inputEdad.value;
@@ -14,11 +15,12 @@ btnEnviar.addEventListener("click", () => {
     edad: edad,
   };
 
-  fetch("http://localhost:3000/personas", {
+  await fetch("http://localhost:3000/personas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(cuerpoPeticion),
   });
+  window.location.replace("./index.html");
 });
