@@ -24,3 +24,20 @@ btnEnviar.addEventListener("click", async (e) => {
   });
   window.location.replace("./index.html");
 });
+
+btnEnviar.addEventListener("click", (e) => {
+  e.preventDefault();
+  const cuerpoPersona = {
+    nombre: inputNombre.value,
+    apellido: inputApellido.value,
+    edad: inputEdad.value,
+  };
+
+  fetch("http://localhost:3000/personas", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(cuerpoPersona),
+  });
+});

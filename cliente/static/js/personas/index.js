@@ -19,7 +19,9 @@ function renderizarTabla() {
                     <td>${personas[i].apellido}</td>
                     <td>${personas[i].edad}</td>
                     <td>
-                        <a href="./ver-persona.html"><button class="btn-ver">Ver</button></a>
+                        <a href="./ver-persona.html">
+                          <button class="btn-ver">Ver</button>
+                        </a>
                         <button class="btn-borrar">Eliminar</button>
                     </td>
                 </tr>
