@@ -1,9 +1,9 @@
 const Persona = require("../models/persona");
 
-async function verPersonas(req, res) {
+const verPersonas = async (req, res, next) => {
   const personas = await Persona.find();
   res.json(personas);
-}
+};
 
 async function verPersona(req, res) {
   const { id } = req.params;
